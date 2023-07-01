@@ -28,20 +28,22 @@ setInterval(() => {
         console.log(numAttr);
         if (numAttr === hour) {
           $(el).addClass("present");
-          $(el).removeClass("past");
-          $(el).removeClass("future");
+        //   $(el).removeClass("past");
+        //   $(el).removeClass("future");
         } else if (numAttr > hour) {
           $(el).addClass("future");
-          $(el).removeClass("past");
-          $(el).removeClass("present");
+        //   $(el).removeClass("past");
+        //   $(el).removeClass("present");
         } else {
           $(el).addClass("past");
-          $(el).removeClass("future");
-          $(el).removeClass("present");
+        //   $(el).removeClass("future");
+        //   $(el).removeClass("present");
         }
       });
+    //   added a clearbutton eventlistener
       clearButton.on('click', (function(){
         localStorage.clear();
+        location.reload(true);
       }))
 
 
